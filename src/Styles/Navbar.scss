@@ -1,0 +1,203 @@
+@import "./variables.scss";
+
+
+.navbar{
+    height: 80px;
+    width: 100%;
+    background-color:  #573329;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .left-side{
+        position: absolute;
+        left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+        height: 100%;
+        width: 60%;
+        .site-logo{
+            .logo{
+                margin-left: 50px;
+                height: 40px;
+                width: 40px;
+          }   
+        }
+        ul{
+            display: flex;
+            list-style-type: none;
+
+            li{
+                margin-left: 50px;
+                a{
+                    text-decoration: none;
+                    color: $gri;
+                    font-size: 18px;
+                    transition: all ease-in 100ms;
+                    &:hover{
+                        color: #b1aeae;
+                    }
+                }
+            }
+        }
+    }
+
+    .right-side{
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 30%;
+        display: flex;
+        align-items: center;
+
+        .icons{
+            width: 50%;            
+            .icon{
+                height: 25px;
+                width: 25px;
+                margin-right: 20px;
+                color: #fff;
+                transition:ease-in-out all 100ms;
+                &:hover{
+                    height: 26px;
+                    width: 26px;
+                    color: rgb(212, 211, 211);
+                }
+            }
+        }
+        .mint{
+            width: 100px;
+            height: 40px;
+            margin-left: 30px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: $turunc;
+            font-weight: 700;
+            letter-spacing: 3px;
+ 
+        }
+        .burger{
+            height: 60px;
+            width: 60px;
+            color: $turunc;
+           display: none;
+           cursor: pointer;
+        }
+    }
+
+}
+
+@media screen and (max-width:770px) {
+     
+   .navbar{
+       width: 100%;
+       display: flex;
+       justify-content: flex-start;
+
+       .left-side{
+           ul{
+               margin-left: 20px;
+            li{
+                margin-left: 15px;
+                a{
+                    font-size: 16px;
+                }
+            }
+           }
+       }
+
+       .right-side{
+           .mint{
+               display: block;
+               margin-right: 10px;
+           }
+           .icons{
+           display: none;
+           }
+
+       }
+       
+   }
+ 
+}
+
+
+@media screen and (max-width:540px) {
+
+    .navbar{
+        .left-side{
+            width: 30%;
+            ul{
+                display: none;
+            }
+        }
+
+        .right-side{
+            width: 30%;
+            .mint{
+                margin-left: -20px;
+                padding: 5px;
+            }
+
+            .burger{
+                display: block;
+                margin-right: 10px;
+            }
+        }
+
+    }
+
+}
+
+.dropdown{
+    height: 230px;
+    position: relative;
+    transition: all ease-in-out 200ms;
+    .left-side{
+        position: absolute;
+        width: 100%;
+        .site-logo{
+            position: absolute;
+            top: 20px;
+            left: 0px;
+        }
+
+        ul{
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            margin: -25px 0 0 -25px;
+            height: 100px;
+            display: block;
+            margin-top: -40px;
+            li{
+                margin-top: 15px;
+
+                a{
+                    &:hover{
+                        background-color: #573329;
+                        color: aliceblue;
+                    }
+                }
+            }
+
+        }
+    }
+    
+    .right-side{
+        .mint{
+            position: absolute;
+            width: 100px;
+            top: 20px;
+            right: 70px;
+            
+        }
+        .burger{
+            position: absolute;
+            top: 10px;
+            right: 5px;
+        }
+    }
+}
